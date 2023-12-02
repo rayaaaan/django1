@@ -1,10 +1,10 @@
 {%extends 'hello/layout.html'%}
 
 {%block rayan%}
-    <form action="{% url 'index'%}" method="POST">
+    <form action="{% url 'tasks:add'%}" method="POST">
         {%csrf_token%}
             {{form}}
         <input type="submit">
     </form>
-    <a href="{% url 'index'%}">tasks</a>
+    <a href="{% url 'tasks:index'%}">tasks</a>
 {%endblock%}
